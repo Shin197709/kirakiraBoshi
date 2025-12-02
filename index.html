@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirakira Boshi</title>
+  <link rel="icon" type="image/webp" href="img2/logo.webp">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="index.css">
+  
+  
+
+  <!--<link rel="preload" as="image" href="img2/fondo1.webp">-->
+  <link rel="preload" as="font" href="Fuentes/reggae-one.ttf" type="font/ttf" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Reggae One';
+      src: url('fonts/ReggaeOne-Regular.ttf') format('truetype');
+      font-display: swap;
+    }
+  </style>
+</head>    
+
+<body>
+     <!-- Encabezado -->
+     <header>
+          <div class ="container">
+               <div class="logo">
+                    <img src="img2/logo.webp" alt="Logo de Kirakira Boshi" width="70" height="70">
+                    <p>Kirakira Boshi</p>
+               </div>
+
+               <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+               <nav class="nav visible" id="nav">
+                    <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
+                     <ul class="nav-list"> 
+                    <li><a href="#">Destinos</a></li>
+                    <li><a href="#">Actividades</a></li>
+                    <li><a href="#">Planifica tu viaje</a></li>
+                    <li><button>Iniciar sesión</button></li>
+                    </ul>
+               </nav>
+          </div>
+     </header>
+
+<section id="hero">
+<div id="slider">
+		<img src="img2/fondo1.webp" alt="">
+		<img src="img2/fondo2.webp" alt="">
+		<img src="img2/fondo3.webp" alt="">
+		
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td id="izquierda">
+					<input type="button" value="&#10094;" onclick="cambiarManual('IZQ')">
+				</td>
+				<td id="derecha">
+					<input type="button" value="&#10095;" onclick="cambiarManual('DER')">
+				</td>
+			</tr>
+		</table>
+	</div>
+      
+        
+    </div>
+    
+    <!-- El contenido del hero fuera del slider -->
+    <div class="hero-content">
+        <h1>Japón</h1>
+        <h3>Donde la tradición florece y la modernidad sorprende</h3>
+        <a href="tecnologia.html" aria-current="page">Planifica tu viaje aquí</a>
+    </div>
+</section>
+
+     <!-- Sección lugares populares -->
+     <section id="lugaresPopulares">
+
+          <div class="fondoNegro">
+               <h2>Lugares populares</h2>
+                    <div class="contenedorLugares">
+                         <div class="lugarPopular">
+                              <button>
+                              <img src="img2/Palacio.webp" alt="Palacio imperial de Tokio" width="50"loading="lazy">
+                              </button>
+                              <p><h3>Palacio imperial</h3></p>
+                              <p><h4>¡Conoce la residencia del emperador de Japón!</h4></p>
+                         </div>
+
+                         <div class="lugarPopular">
+                              <button>
+                              <img src="img2/osaka.webp" alt="vista de Osaka" width="50" loading="lazy">
+                              </button>
+                              <p><h3>Osaka</h3></p>
+                              <p><h4>¡Visita la ciudad más alegre!</h4></p>
+                         </div>
+
+                         <div class="lugarPopular">
+                              <button>
+                              <img src="img2/miyajima.webp" alt="santuario Flotante de Miyajima" width="50" loading="lazy">
+                              </button>
+                              <p><h3>Miyajima</h3></p>
+                              <p><h4>¡Conoce la isla del torii flotante!</h4></p>
+                         </div>
+                    </div>
+          </div>
+
+     </section>
+     
+     <!-- Sección de mapa -->
+     <section id="mapa">
+               <div class="contenido">
+               <h2>Viaja a Japón con un solo vistazo al mapa</h2>
+
+                         <div class="fondoBlanco">
+                              <div class="slideshow">
+                              <div class="slide">
+                                   <h2>Hokkaido</h2>
+                                   <p>Famosa por sus paisajes nevados, festivales de invierno y onsens.</p>
+                              </div>
+                              <div class="slide">
+                                   <h2>Kanto</h2>
+                                   <p>Aquí se encuentra Tokio, mezcla de modernidad y tradición.</p>
+                              </div>
+                              <div class="slide">
+                                   <h2>Kansai</h2>
+                                   <p>Región de Kioto y Osaka, llena de templos, cultura y gastronomía.</p>
+                              </div>
+                              <div class="slide">
+                                   <h2>Okinawa</h2>
+                                   <p>Islas tropicales con playas paradisíacas y cultura única.</p>
+                              </div>
+                              </div>
+                         </div>
+                         </div>
+
+               <div class="mapa-japon">
+                    <img src="img2/mapa.webp" alt="Mapa de Japón" loading="lazy" />
+               </div>
+     </section>
+
+     <!-- Intereses -->
+     <section id="intereses">
+          <div class="fondoNegro">
+
+          <h2>Explora según tus intereses</h2>
+
+               <div class="intereses-container">
+                    <div class="intereses">
+                         <button>
+                         <img src="img2/anime.webp" alt="Anime y tecnologia japonesa" loading="lazy">
+                         <span class="texto-boton">Tecnología, video juegos y anime</span>
+                         </button>
+                    </div>
+
+                    <div class="intereses">
+                         <button>
+                         <img src="img2/samurai.webp" alt="Guerrero samurai representando la cultura japonesa"loading="lazy">
+                         <span class="texto-boton">Cultura</span>
+                         </button>
+                    </div>
+
+                    <div class="intereses">
+                         <button>
+                         <img src="img2/naturaleza.webp" alt="Paisaje natural de Japón"loading="lazy">
+                         <span class="texto-boton">Naturaleza</span>
+                         </button>
+                    </div>
+
+                    <div class="intereses">
+                         <button>
+                         <img src="img2/gastronimia.webp" alt="plato tipico japonés"loading="lazy">
+                         <span class="texto-boton">Gastronomía</span>
+                         </button>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+   <!-- Sección otros -->
+     <section id="otros">
+          <div class="fondoB">
+               
+               <div class="cambioMoneda">
+                    <button>
+                    <img src="img2/moneda.webp" alt="Tramites de cambio de moneda" width="50"loading="lazy">
+                    </button>
+                    <p>Cambio de moneda</p>
+
+               </div>
+               <div class="visas">
+                    <button>
+                    <img src="img2/visas.webp" alt="Trámite de visas para viajar a Japón" width="50"loading="lazy">
+                    </button>
+                    <p>Visas</p>
+               </div>
+
+               <div class="alquiler">
+                    <button>
+                    <img src="img2/transporte.webp" alt="Icono de trasnporte o alquiler de vehiculos" width="50"loading="lazy">
+                    </button>
+                    <p>Alquiler o transporte</p>
+               </div>
+               
+               <div class="alojamiento">
+                    <button>
+                    <img src="img2/alojamiento.webp" alt="Ayuda con el alojamiento" width="50"loading="lazy">
+                    </button>
+                    <p>Alojamiento</p>
+               </div>
+               
+               <div class="clima">
+                    <button>
+                    <img src="img2/clima.webp" alt="Consultar clima y geografía de Japón" width="50"loading="lazy">
+                    </button>
+                    <p>Clima y geografía</p>
+
+               </div>
+          </div>
+     </section>
+
+     <!-- Footer -->
+    <footer>
+          <div class="footer-brand">
+          <p>Kirakira Boshi</p>
+          <div class="social">
+               <a href="#"><i class="fab fa-facebook"></i></a>
+               <a href="#"><i class="fab fa-linkedin"></i></a>
+               <a href="#"><i class="fab fa-youtube"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          </div>
+
+          <div class="footer-links">
+          <ul>
+               <li class="title">Sitios relacionados</li>
+               <li><a href="#">Agencia de convenciones</a></li>
+          </ul>
+
+          <ul>
+               <li class="title">Acerca de nosotros</li>
+               <li><a href="#">Quienes somos</a></li>
+               <li><a href="#">Contáctanos</a></li>
+          </ul>
+
+          <ul>
+               <li class="title">Demás enlaces</li>
+               <li><a href="#">Preguntas frecuentes</a></li>
+               <li><a href="#">Opinión de los clientes</a></li>
+               <li><a href="#">Califica nuestros servicios</a></li>
+          </ul>
+          </div>
+     </footer>
+     <div id="notificacion-hora" class="notificacion-flotante">
+    <div class="personaje-container">
+        <img src="img2/personaje.png" alt="Personaje japonés" class="personaje-img">
+    </div>
+    <div class="notificacion-contenido">
+        <span class="notificacion-texto"></span>
+        <button class="cerrar-notificacion" onclick="cerrarNotificacion()">×</button>
+    </div>
+</div>
+     <script src="index.js"></script>
+</body>
+</html>

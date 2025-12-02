@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Kirakira Boshi/Tecnología</title> 
+     <link rel="icon" type="image/webp" href="img2/logo.webp">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <link rel="stylesheet" href="tecnologia.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     
+</head>
+<body>
+         <!-- Encabezado -->
+        <header>
+          <div class ="container">
+               <div class="logo">
+                    <img src="img2/logo.webp" alt="Logo de Kirakira Boshi" width="70" height="70">
+                    <p>Kirakira Boshi</p>
+               </div>
+
+               <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+               <nav class="nav visible" id="nav">
+                    <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
+                     <ul class="nav-list"> 
+                    <li><a href="#">Destinos</a></li>
+                    <li><a href="#">Actividades</a></li>
+                    <li><a href="#">Planifica tu viaje</a></li>
+                    <li><button>Iniciar sesión</button></li>
+                    </ul>
+               </nav>
+          </div>
+     </header>
+
+     <!-- Hero de la página -->
+
+     <section id="hero">
+          <div id="slider">
+		<img src="img2/nier.webp" alt="">
+		<img src="img2/fondo4.webp" alt="">
+		<img src="img2/fondo5.webp" alt="">
+		
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td id="izquierda">
+					<input type="button" value="&#10094;" onclick="cambiarManual('IZQ')">
+				</td>
+				<td id="derecha">
+					<input type="button" value="&#10095;" onclick="cambiarManual('DER')">
+				</td>
+			</tr>
+		</table>
+	</div>
+      <div class="hero-text">
+
+        <h1>Explora lo mejor de Japón: Anime y diversión en cada esquina</h1>
+        
+    </div>
+     </section>
+
+     <!-- Sección de lugares imperdibles -->
+     <section id="lugaresImperdibles">
+          <div class="fondoBlanco">
+
+                    <h1>¡Lugares imperdibles!</h1>
+
+                         <div class="contenedorImperdibles">
+                              <div class="imperdibles">
+                                   <button>
+                                   <img src="img2/tokio.webp" alt="Consultar acerca de Tokio" loading="lazy">
+                                   <span class="texto-boton">Tokio</span>
+                                   </button>
+                              </div>
+
+                              <div class="imperdibles">
+                                   <button>
+                                   <img src="img2/osaka2.webp" alt="Consultar acerca de Osaka" loading="lazy">
+                                   <span class="texto-boton">Osaka</span>
+                                   </button>
+                              </div>
+
+                         </div>
+          </div>
+     </section>
+     <!-- Experiencias unicas solo para ti -->
+
+     <section id="soloParaTi">
+
+               <div class="fondoNegro">
+                    <h1>¡Experiencias únicas solo para ti!</h1>
+                         <div class="contenedorExperiencias">
+                              <div class="anime">
+                                   <button>
+                                   <img src="img2/maidCafe.webp" alt="consultar sección de anime y manga" width="50" loading="lazy">
+                                   </button>
+                                   <h2><a href="#">Anime y manga</a></h2>
+                                   <p>¡Visita cafés temáticos</p>
+                                   <p>Tiendas especializadas</p>
+                                   <p>Conoce estudios de animación o museos</p>
+                              </div>
+
+                              <div class="lugarPopular">
+                                   <button>
+                                   <img src="img2/videoJuegos.webp" alt=" consultar seccion mundo gamer y electrónica" width="50" loading="lazy">
+                                   </button>
+                                   <h2><a href="#">Mundo gamer y electrónica</a></h2>
+                                   <p>Centros de video juegos retro y modernos</p>
+                                   <p>E-sports y salas de arcade clásicas</p>
+                                   <p>No te pierdas del distrito de la técnología</p>
+                              </div>
+                         </div>
+               </div>
+
+          </section>
+
+
+      <!-- Eventos y convenciones -->
+     <section id="">
+          <div class="fondoWhite">
+
+                    <h1>Eventos y convenciones</h1>
+
+                         <div class="contenedorEventos">
+                              <div class="comiketTokio">
+                                   <button>
+                                   <img src="img2/comiket.webp" alt=" consultar acerca de la Comiket" loading="lazy">
+                                   <span class="boton">Comiket en Tokio</span>
+                                   </button>
+                                   <p>Sabado 16-domingo 27 de 2025</p>
+                              </div>
+
+                              <div class="gameShow">
+                                   <button>
+                                   <img src="img2/gameShow.webp" alt="consultar acerca de los gameShow" loading="lazy">
+                                   <span class="boton">Tokyo Game Show 2025</span>
+                                   </button>
+                    
+                                   <p>Jueves 25-domingo 28 de septiembre</p>
+                              </div>
+
+                         </div>
+          </div>
+     </section>
+
+     <!-- footer -->
+      <Section id="footer">
+          <div class="fondoNegro">
+               <footer>
+                         <div class="footer-brand">
+                         <p>Kirakira Boshi</p>
+                         </div>
+
+                         <div class="footer-links">
+                         <ul>
+                              <li class="title">Sitios relacionados</li>
+                              <li><a href="#">Agencia de convenciones</a></li>
+                         </ul>
+
+                         <ul>
+                              <li class="title">Acerca de nosotros</li>
+                              <li><a href="#">Quienes somos</a></li>
+                              <li><a href="#">Contáctanos</a></li>
+                         </ul>
+
+                         <ul>
+                              <li class="title">Demás enlaces</li>
+                              <li><a href="#">Preguntas frecuentes</a></li>
+                              <li><a href="#">Opinión de los clientes</a></li>
+                              <li><a href="#">Califica nuestros servicios</a></li>
+                         </ul>
+                         </div>
+               </footer>
+     </Section>
+     <script src="tecnologia.js"></script>
+</body>
+</html>

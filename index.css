@@ -1,0 +1,1017 @@
+@font-face {
+font-family: 'Reggae One';src: url('fonts/ReggaeOne-Regular.ttf') format('truetype');font-weight: normal; font-style: normal;font-display: swap;
+
+}
+/* Reset básico */
+* {
+  margin: 0; /* margen */
+  padding: 0;/* relleno de un elemento*/
+  box-sizing: border-box; 
+}
+
+/*header de la página*/
+header {
+  background-color: white;
+  padding: 10px 40px;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*Logo con nombre de la página */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre el pez y el texto */
+}
+
+/* Logo a la izquierda */
+.logo {
+  font-family: "Reggae One", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #7a0000;
+}
+ .abrir-menu{
+  display: none;
+ }
+.nav-list{
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  
+}
+
+
+/* Nav centrado */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* separación entre enlaces */
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+   font-family: "Arial", sans-serif;
+  color: #7a0000;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+nav ul li a:hover{
+  color: #330303; 
+}
+
+/* Botón a la derecha */
+nav ul li button {
+  background-color: #600000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav ul li button:hover {
+  background-color: #600000; 
+}
+
+
+/* Hero section */
+#hero {
+  height: 100vh;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Capa oscura encima del fondo */
+#hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  z-index: 2; /* para que no oscuresca el texto también*/
+  pointer-events: none;
+}
+
+/* Título "Japón"*/
+#hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Subtítulo "Donde la tradición...."*/
+#hero h3 {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* Botón "Planifica tu viaje" */
+#hero a {
+  background-color: #600000;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Reggae One", cursive;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+
+}
+
+#hero button:hover {
+  background-color: #600000;
+}
+/* Enlaces y botones accesibles al usar el teclado */
+a:focus,
+button:focus {
+  outline: none; /* quita el outline predeterminado */
+  box-shadow: 0 0 0 3px #ffffff; /* borde visible y redondeado */
+  border-radius: inherit; /* sigue el mismo radio del contenedor */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;      /* Más alto que el slider y que el ::before */
+  color: white;
+  text-align: center;
+  width: 100%;
+  user-select: none;
+}
+
+/* ----- SLIDER ----- */
+
+#slider{
+  
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    overflow:hidden;
+    background-color: black;
+    position: absolute;
+    
+}
+/*Valores de las imagenes*/
+#slider img{
+     margin: 0;
+    -moz-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center; /* Centrado explícito */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: brightness(0.5);
+}
+/*Para que la primera imagen este activa al inicio*/
+#slider img:nth-child(1){
+    opacity: 1;
+}
+
+table{
+    margin: 0 auto;
+    width: 800px;
+    height: auto;
+    overflow:hidden;
+    background-color: white;
+    border: 0;
+}
+
+#izquierda {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0 20px; /* Ajusta el espacio del borde */
+  
+}
+
+#derecha {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0 20px; /* Ajusta el espacio del borde */
+}
+#izquierda {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0 20px;
+}
+
+#derecha {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0 20px;
+}
+
+/* Estilos para los botones de flecha */
+#izquierda input[type="button"],
+#derecha input[type="button"] {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#izquierda input[type="button"]:hover,
+#derecha input[type="button"]:hover {
+  background: #600000;
+  transform: scale(1.1);
+}
+
+#hero a {
+  position: relative; 
+  z-index: 3;       
+}
+
+
+/*Lugares populares*/
+
+.fondoNegro {
+  background-color: black;
+  color: white;
+  padding: 40px; 
+}
+
+.fondoNegro  {
+  text-align: right;
+  font-family: Arial, sans-serif;
+  color: white; 
+  margin-right:0px; 
+}
+
+.contenedorLugares {
+  
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  flex-wrap: wrap;
+  gap: 60px; /* espacio entre las tarjetas */
+  margin-top: 40px;
+  text-align: center;
+}
+
+.lugarPopular {
+  text-align: left; /* centra imagen y texto dentro de cada tarjeta */
+  max-width: 285px;   /*limita ancho */
+  
+}
+
+.lugarPopular img {
+  width: 290px;       /* ancho */
+  height: 290px;      /* alto*/
+  object-fit: cover;  /* recorta la imagen y llena el cuadro */
+  border-radius: 10px; /* Para esquinas redondeadas */
+  
+  
+}
+
+
+
+.lugarPopular button {
+  border: none;      /* para borrar el borde de las imágenes */
+  background: none;  /* elimina el fondo del botón*/
+  padding: 0;        /* quita espacios de adentro */
+  cursor: pointer;   /*  cambia el cursor al pasar */
+}
+
+
+.lugarPopular button:hover img { /*sombrita en la imagen al pasar ratón*/
+  filter: brightness(0.8) contrast(1.2);
+  transition: filter 0.5s ease;
+  transform: scale(1.10);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.lugarPopular  p {
+  margin-top: 20px;
+  text-align: left; 
+} 
+
+
+/*sección mapa*/
+#mapa {
+  display: flex;
+  align-items: flex-start; /* Alínea todo arriba */
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 80px;
+  background: #f8f8f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Columna izquierda: título + slide */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  margin-top: -20px; /* Sube todo el bloque */
+}
+
+/* Título principal de la sección de mapa */
+#mapa h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px; /* menos espacio con el slide */
+  color: #5e0303;
+  line-height: 1.3;
+}
+
+/*Fondito del slideshow */
+.fondoBlanco {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 25px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*Slideshow */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 220px; 
+  overflow: hidden;
+}
+
+/* Cada slide */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Título y texto dentro del slide */
+.slide h2 {
+  font-size: 1.8rem;
+  color: #230404;
+  margin-bottom: 10px;
+}
+
+.slide p {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* Mostrar slide activa */
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+/*Animación del slide */
+@keyframes slideShow {
+  0% { opacity: 1; transform: translateX(0); }
+  20% { opacity: 1; transform: translateX(0); }
+  25% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 0; transform: translateX(-100%); }
+}
+
+/* Aplicar animación a cada slide */
+.slide:nth-child(1) {
+  animation: slideShow 17s infinite;
+}
+.slide:nth-child(2) {
+  animation: slideShow 17s infinite 4s;
+}
+.slide:nth-child(3) {
+  animation: slideShow 17s infinite 8s;
+}
+.slide:nth-child(4) {
+  animation: slideShow 17s infinite 12s;
+}
+
+/* Contenedor del mapa*/
+.mapa-japon {
+  flex-shrink: 0;
+  width: 450px;
+  display: flex;
+  align-items: flex-start; /* sube el mapa */
+  justify-content: center;
+}
+
+.mapa-japon img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+  border-radius: 10px;
+}
+
+/*intereses*/
+
+.fondoNegro {
+  background:#1c1c1c;
+  color: white;
+  padding: 40px;
+}
+
+.fondoNegro h2 {
+  text-align: auto;
+  margin-bottom: 50px;
+}
+
+.intereses-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* columnas */
+  gap: 30px; /* espacio entre  cuadros */
+  max-width: 900px; /* ancho */
+  margin: 0 auto; 
+}
+
+.intereses {
+  text-align: center;
+}
+
+.intereses button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.intereses img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: brightness(80%);
+  transition: filter 0.3s ease;
+}
+
+.intereses button:hover img {
+  filter: brightness(0.8) contrast(1.2);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.texto-boton {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0,0,0,0.8);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/*Sección otros*/
+.fondoB {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* espacio entre las tarjetas */
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+
+.fondoB div {
+  background: #f1f1f1;
+  border-radius: 12px;
+  width: 140px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.fondoB div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Quitar borde de  imágenes y botones */
+.fondoB img,
+.fondoB button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.fondoB img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.fondoB p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color:#a20101;;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+/*footer*/
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 150px;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+}
+
+.footer-brand {
+  max-width: 250px;
+}
+
+.footer-brand p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social a {
+  color: #ccc;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: #fff;
+}
+
+/* NAV como columnas */
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 60px;
+}
+
+.footer-links h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.cerrar-menu{
+  display: none;
+}
+ 
+
+
+
+/* --- Ajuste responsivo para tablets y móviles --- */
+@media (max-width: 768px) {
+  
+/* --- Diseño fluido por defecto (PC y tablet ) --- 
+header {
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* permite que se acomode solo si no hay espacio 
+  gap: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap; /* que las opciones bajen automáticamente si no caben 
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+*/
+
+  .contenedorLugares {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .lugarPopular {
+    width: 90%;
+    max-width: 400px;
+    text-align: a;
+  }
+
+  .lugarPopular img {
+    height: 200px; /* un poco más bajo en móviles */
+  }
+}
+
+/* --- Ajustes solo para pantallas muy pequeñas (<600px) --- */
+@media screen and (max-width: 600px) {
+  header .container {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+ .logo{
+  display: flex;
+  margin-right: auto;
+ }
+
+
+ .abrir-menu, .cerrar-menu{
+  display: block;
+  border: 0;
+  font-size: 1.50rem;
+  background-color: transparent;
+  cursor: pointer;
+  color:#1c1c1c;
+ }
+
+ .nav{
+  opacity: 0;
+  visibility: hidden;
+ }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: fixed;    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;         /* lado vertical */
+    height: 100vh;      /* asegura pantalla completa */
+    background: white;
+    padding: 2rem;
+    z-index: 999;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5); 
+  }
+
+.nav.visible{
+  opacity: 1;
+  visibility: visible;
+}
+
+  .nav-list{
+    flex-direction: column;
+    align-items: end;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #mapa {
+    flex-direction: column;
+    gap: 20px;
+
+}
+  
+/* --- Ajuste responsivo para la sección del mapa --- */
+#mapa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Permite que se acomode automáticamente */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#mapa .contenido {
+  flex: 1 1 400px; /* Mínimo 400px */
+  text-align: center;
+}
+
+#mapa .mapa-japon {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mapa img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* todo se apila verticalmente */
+@media (max-width: 768px) {
+  #mapa {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  #mapa .contenido,
+  #mapa .mapa-japon {
+    width: 100%;
+  }
+
+  #mapa img {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+@media (max-width: 900px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    gap: 40px;
+    justify-items: center;
+  }
+
+  .footer-links h4 {
+    margin-bottom: 8px;
+  }
+}
+
+/* === VISTA TELÉFONO === */
+@media (max-width: 600px) {
+  footer {
+    padding: 40px 20px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr; /* una sola columna centrada */
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-links ul {
+    padding: 0;
+  }
+
+  .footer-links ul li {
+    margin-bottom: 6px;
+  }
+
+  .footer-brand p {
+    font-size: 18px;
+  }
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /*evitar  desplazamiento lateral */
+}
+
+}
+
+
+
+
+.notificacion-flotante {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    max-width: 450px;
+    min-height: 140px;
+    animation: slideInRight 0.5s ease-out;
+    display: none;
+    align-items: center;
+    gap: 0;
+    border: 3px solid #600000;
+    overflow: hidden;
+}
+
+.notificacion-flotante.mostrar {
+    display: flex;
+}
+
+.personaje-container {
+    background: linear-gradient(135deg, #600000, #8B0000); /* Gradiente elegante */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+}
+
+.personaje-img {
+    width: 100px; /* Un poco más grande para aprovechar el PNG */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: contain; /* IMPORTANTE para PNG con transparencia */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+/* Efecto sutil al hover en toda la notificación */
+.notificacion-flotante:hover .personaje-img {
+    transform: scale(1.05);
+}
+
+.notificacion-contenido {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notificacion-texto {
+    flex: 1;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cerrar-notificacion {
+    background: #600000;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.cerrar-notificacion:hover {
+    background: #400000;
+    transform: scale(1.1);
+}
+
+/* Animaciones */
+@keyframes slideInRight {
+    from { 
+        transform: translateX(100%); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+@keyframes slideOutRight {
+    from { 
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+    to { 
+        transform: translateX(100%); 
+        opacity: 0; 
+    }
+}
+
+.notificacion-flotante.ocultar {
+    animation: slideOutRight 0.5s ease-in forwards;
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .notificacion-flotante {
+        max-width: 380px;
+        min-height: 120px;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .personaje-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .notificacion-texto {
+        font-size: 1rem;
+    }
+}
